@@ -1,0 +1,1555 @@
+ <table border="2px" id="lusReport1" class="table table-hover table-bordered text-center">
+                <thead style="position: sticky; top: 0; z-index: 9;">
+                    <tr>
+                        <th colspan="20" class="tbl_header">
+                            <h4><b>Area Irrigated (Source Wise) in Each District of State/UT for The Year 2023-2024 (Hectare)</b></h4>
+                        </th>
+                    </tr>
+
+                    
+                    <tr>
+                        <th rowspan="3" class="tbl_header"><b>S.No.</b></th>
+                        <th rowspan="3" class="tbl_header"><b>District</b></th>
+                                                                                                        <th colspan="9" class="wrapWords_td tbl_header">
+                                Net Irrigated Area
+                            </th>
+                                                                                <th colspan="9" class="wrapWords_td tbl_header">
+                                Gross Irrigated Area
+                            </th>
+                                            </tr>
+
+                    
+                    <tr>
+                                                                                                                                            <th colspan="3" class="wrapWords_td tbl_header">
+                                                                            Canal
+                                                                    </th>
+                                                                                            <th rowspan="2" class="wrapWords_td tbl_header">
+                                                                            Tank
+                                                                    </th>
+                                                                                            <th colspan="3" class="wrapWords_td tbl_header">
+                                                                            Well
+                                                                    </th>
+                                                                                            <th rowspan="2" class="wrapWords_td tbl_header">
+                                                                            Other Source
+                                                                    </th>
+                                                                                            <th rowspan="2" class="wrapWords_td tbl_header">
+                                                                            <b>Total (5 + 6 + 9 + 10)</b>
+                                                                                                            </th>
+                                                                                                                                                <th colspan="3" class="wrapWords_td tbl_header">
+                                                                            Canal
+                                                                    </th>
+                                                                                            <th rowspan="2" class="wrapWords_td tbl_header">
+                                                                            Tank
+                                                                    </th>
+                                                                                            <th colspan="3" class="wrapWords_td tbl_header">
+                                                                            Well
+                                                                    </th>
+                                                                                            <th rowspan="2" class="wrapWords_td tbl_header">
+                                                                            Other Source
+                                                                    </th>
+                                                                                            <th rowspan="2" class="wrapWords_td tbl_header">
+                                                                            <b>Total (14 + 15 + 18 + 19)</b>
+                                                                                                            </th>
+                                                                        </tr>
+
+                    
+                    <tr>
+                                                                                                                                                                                                                                <th class="wrapWords_td tbl_header">
+                                                                                            Government
+                                                                                                                                    </th>
+                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            Private
+                                                                                                                                    </th>
+                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            <b>Total (3 To 4)</b>
+                                                                                                                                    </th>
+                                                                                                                                                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            Tubewell
+                                                                                                                                    </th>
+                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            Other Well
+                                                                                                                                    </th>
+                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            <b>Total (6 To 7)</b>
+                                                                                                                                    </th>
+                                                                                                                                                                                                                                                                                                        <th class="wrapWords_td tbl_header">
+                                                                                            Government
+                                                                                                                                    </th>
+                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            Private
+                                                                                                                                    </th>
+                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            <b>Total (9 To 10)</b>
+                                                                                                                                    </th>
+                                                                                                                                                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            Tubewell
+                                                                                                                                    </th>
+                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            Other Well
+                                                                                                                                    </th>
+                                                                                                                    <th class="wrapWords_td tbl_header">
+                                                                                            <b>Total (12 To 13)</b>
+                                                                                                                                    </th>
+                                                                                                                                            </tr>
+
+                    
+                    <tr>
+                        <th class="tbl_header">1</th>
+                        <th class="tbl_header">2</th>
+                                                                                                                                                                                        <th class="tbl_header"><b>3</b></th>
+                                                                            <th class="tbl_header"><b>4</b></th>
+                                                                            <th class="tbl_header"><b>5</b></th>
+                                                                                                                                                                    <th class="tbl_header"><b>6</b></th>
+                                                                                                                                                                        <th class="tbl_header"><b>7</b></th>
+                                                                            <th class="tbl_header"><b>8</b></th>
+                                                                            <th class="tbl_header"><b>9</b></th>
+                                                                                                                                                                    <th class="tbl_header"><b>10</b></th>
+                                                                                                                                <th class="tbl_header"><b>11</b></th>
+                                                                                                                                                                                                                            <th class="tbl_header"><b>12</b></th>
+                                                                            <th class="tbl_header"><b>13</b></th>
+                                                                            <th class="tbl_header"><b>14</b></th>
+                                                                                                                                                                    <th class="tbl_header"><b>15</b></th>
+                                                                                                                                                                        <th class="tbl_header"><b>16</b></th>
+                                                                            <th class="tbl_header"><b>17</b></th>
+                                                                            <th class="tbl_header"><b>18</b></th>
+                                                                                                                                                                    <th class="tbl_header"><b>19</b></th>
+                                                                                                                                <th class="tbl_header"><b>20</b></th>
+                                                                                                        </tr>
+                </thead>
+
+                <tbody>
+                                        <tr>
+                        <th colspan="20" class="text-center bg-primary text-white fw-bold py-4">
+                            State: <span class="text-danger">Punjab</span>
+                        </th>
+
+
+                    </tr>
+
+                                                                    <tr>
+                            <td class="stickyCol1">1</td>
+                            <td class="text-left stickyCol2">Amritsar</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    18387
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    18387
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    201135
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    201135
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            219522
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    23346
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    23346
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    394342
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    394342
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            417688
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">2</td>
+                            <td class="text-left stickyCol2">Barnala</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    58815
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    58815
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    64824
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    64824
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            123639
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    62010
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    62010
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    184023
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    184023
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            246033
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">3</td>
+                            <td class="text-left stickyCol2">Bathinda</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    226291
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    226291
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    56422
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    56422
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            282713
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    226391
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    226391
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    327988
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    327988
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            554379
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">4</td>
+                            <td class="text-left stickyCol2">Faridkot</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    56695
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    56695
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    70315
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    70315
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            127010
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    56735
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    56735
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    190384
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    190384
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            247119
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">5</td>
+                            <td class="text-left stickyCol2">Fatehgarh sahib</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    33
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    33
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    101926
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    101926
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            101959
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    41
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    41
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    187818
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    187818
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            187859
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">6</td>
+                            <td class="text-left stickyCol2">Fazilka</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    245179
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    245179
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    6361
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    6361
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            251540
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    247520
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    247520
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    238967
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    238967
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            486487
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">7</td>
+                            <td class="text-left stickyCol2">Firozepur</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    63340
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    63340
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    154910
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    154910
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            218250
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    90895
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    90895
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    312169
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    312169
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            403064
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">8</td>
+                            <td class="text-left stickyCol2">Gurdaspur</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    21789
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    21789
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    185491
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    185491
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            207280
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    48097
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    48097
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    347980
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    347980
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            396077
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">9</td>
+                            <td class="text-left stickyCol2">Hoshiarpur</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    6559
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    6559
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    196076
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    196076
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            202635
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    7908
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    7908
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    304801
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    304801
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            312709
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">10</td>
+                            <td class="text-left stickyCol2">Jalandhar</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    242893
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    242893
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            242893
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    403628
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    403628
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            403628
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">11</td>
+                            <td class="text-left stickyCol2">Kapurthala</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    131488
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    131488
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            131488
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    258606
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    258606
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            258606
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">12</td>
+                            <td class="text-left stickyCol2">Ludhiana</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    299214
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    299214
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            299214
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    570502
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    570502
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            570502
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">13</td>
+                            <td class="text-left stickyCol2">Malerkotla</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    58464
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    58464
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            58464
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    115540
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    115540
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            115540
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">14</td>
+                            <td class="text-left stickyCol2">Mansa</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    134387
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    134387
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    50002
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    50002
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            184389
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    317330
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    317330
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    51280
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    51280
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            368610
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">15</td>
+                            <td class="text-left stickyCol2">Moga</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    194217
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    194217
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            194217
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    390301
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    390301
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            390301
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">16</td>
+                            <td class="text-left stickyCol2">Muktsar</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    2054
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    2054
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    225332
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    225332
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            227386
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    2587
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    2587
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    452986
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    452986
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            455573
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">17</td>
+                            <td class="text-left stickyCol2">Nawanshahr</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    342
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    342
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    94108
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    94108
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            94450
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    342
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    342
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    175201
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    175201
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            175543
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">18</td>
+                            <td class="text-left stickyCol2">Pathankot</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    9672
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    9672
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    36748
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    36748
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            46420
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    9863
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    9863
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    84768
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    84768
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            94631
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">19</td>
+                            <td class="text-left stickyCol2">Patiala</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    497
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    497
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    256095
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    256095
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            256592
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    2128
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    2128
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    491284
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    491284
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            493412
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">20</td>
+                            <td class="text-left stickyCol2">Rupnagar</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    2266
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    2266
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    78579
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    78579
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            80845
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    5286
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    5286
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    125962
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    125962
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            131248
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">21</td>
+                            <td class="text-left stickyCol2">S.a.s nagar</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    85090
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    85090
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            85090
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    109450
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    109450
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            109450
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">22</td>
+                            <td class="text-left stickyCol2">Sangrur</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    71479
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    71479
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    183969
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    183969
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            255448
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    72555
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    72555
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    437157
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    437157
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            509712
+                                                                                    </td>
+                                                                                                                        </tr>
+                                                                    <tr>
+                            <td class="stickyCol1">23</td>
+                            <td class="text-left stickyCol2">Tarn taran</td>
+
+                                                                                                                                                                                                                                                            <td>
+                                                                                                    9003
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    9003
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    208537
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    208537
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            217540
+                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                                <td>
+                                                                                                    9112
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    9112
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                                                                                                    <td>
+                                                                                                    385623
+                                                                                                                                                </td>
+                                                                                    <td>
+                                                                                                    -
+                                                                                            </td>
+                                                                                    <td>
+                                                                                                    385623
+                                                                                            </td>
+                                                                                                                                                                                        <td>
+                                                                                            -
+                                                                                    </td>
+                                                                                                                                                <td>
+                                                                                            394735
+                                                                                    </td>
+                                                                                                                        </tr>
+                    
+                    
+                    <tr class="bg-dark text-dark fw-bold py-2">
+                        <th colspan="2" class="stickyCol3"><b>Total of Punjab</b></th>
+
+                                                    
+                                                                                                
+                                                                            <th>
+                                                                                            926788
+                                                                                                                                    </th>
+                                                                            <th>
+                                                                                            -
+                                                                                    </th>
+                                                                            <th>
+                                                                                            926788
+                                                                                    </th>
+                                                                                                                                                                    <th>
+                                                                                    -
+                                                                            </th>
+                                                                                                                                
+                                                                            <th>
+                                                                                            3182196
+                                                                                                                                    </th>
+                                                                            <th>
+                                                                                            -
+                                                                                    </th>
+                                                                            <th>
+                                                                                            3182196
+                                                                                    </th>
+                                                                                                                                                                    <th>
+                                                                                    -
+                                                                            </th>
+                                                                                                                                <th>
+                                                                                    4108984
+                                                                            </th>
+                                                                                                                
+                                                                                                
+                                                                            <th>
+                                                                                            1182146
+                                                                                                                                    </th>
+                                                                            <th>
+                                                                                            -
+                                                                                    </th>
+                                                                            <th>
+                                                                                            1182146
+                                                                                    </th>
+                                                                                                                                                                    <th>
+                                                                                    -
+                                                                            </th>
+                                                                                                                                
+                                                                            <th>
+                                                                                            6540760
+                                                                                                                                    </th>
+                                                                            <th>
+                                                                                            -
+                                                                                    </th>
+                                                                            <th>
+                                                                                            6540760
+                                                                                    </th>
+                                                                                                                                                                    <th>
+                                                                                    -
+                                                                            </th>
+                                                                                                                                <th>
+                                                                                    7722906
+                                                                            </th>
+                                                                                                        </tr>
+
+                                        
+                                                         </tbody>
+            </table>
