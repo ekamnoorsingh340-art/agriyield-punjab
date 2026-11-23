@@ -38,8 +38,6 @@ def test_master_panel_integrity(tmp_path: Path) -> None:
     kap = panel[panel["district_nabard"] == "Kapurthala"].iloc[0]
     assert kap["baseline_irrigation_year"] == "2023-24"
     assert bool(kap["baseline_irrigation_anomaly_fallback"]) is True
-
-    # PAU benchmark summary must include Paddy, Wheat, Potato, Summer_Moong
-    assert set(pau_summary["pau_crop_group"]) == {"Paddy", "Wheat", "Potato", "Summer_Moong"}
-    # PAU benchmark summary must include Basmati, Paddy, Wheat, Potato, Summer_Moong
     assert set(pau_summary["pau_crop_group"]) == {"Basmati", "Paddy", "Wheat", "Potato", "Summer_Moong"}
+
+    
