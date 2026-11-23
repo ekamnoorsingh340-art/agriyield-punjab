@@ -5,3 +5,6 @@ streamlit
 pytest
 lxml
 beautifulsoup4
+fastapi
+uvicorn[standard]
+httpx
