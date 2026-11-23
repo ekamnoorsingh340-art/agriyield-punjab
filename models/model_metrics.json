@@ -1,0 +1,26 @@
+{
+  "model_type": "HistGradientBoostingRegressor",
+  "target_unit": "quintals_per_ekad",
+  "total_clean_records": 4593,
+  "train_records_pre_2020": 4033,
+  "test_records_2020_plus": 560,
+  "holdout_split_year_start": 2020,
+  "temporal_holdout_r2": 0.9898,
+  "temporal_holdout_mae_q_ekad": 3.718,
+  "temporal_holdout_rmse_q_ekad": 10.307,
+  "categorical_features": [
+    "district_nabard",
+    "nabard_az_code",
+    "crop",
+    "season_canonical"
+  ],
+  "numeric_features": [
+    "year_start",
+    "area_ekad",
+    "baseline_tubewell_share_pct",
+    "baseline_canal_share_pct",
+    "baseline_irrigation_intensity_pct",
+    "yield_q_ekad_lag1",
+    "yield_q_ekad_roll3_mean"
+  ]
+}
