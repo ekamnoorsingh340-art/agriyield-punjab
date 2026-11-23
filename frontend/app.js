@@ -143,57 +143,37 @@ function renderResults(data) {
   const pau = data.pau_advisory;
   const irr = data.district_irrigation_profile;
 
-  document.getElementById("res-yield").textContent = `${pred.expected_yield_q_ekad} q/ekad`;
-  document.getElementById(
-    "res-des-compare"
-  ).textContent = `Latest DES (${pred.latest_des_observed_year}): ${pred.latest_des_yield_q_ekad} q/ekad`;
+  // Convert DES milled rice (67% recovery) to raw harvested paddy (dhan)
+  const isRice = (data.crop || "").toLowerCase() === "rice";
+  const MILLING_RECOVERY = 0.67;
 
-  document.getElementById(
-    "res-total"
-  ).textContent = `${pred.total_expected_production_quintals} q`;
-  document.getElementById("res-area-sub").textContent = `Across ${data.area_ekad} ekad`;
+  const displayYield = isRice
+    ? +(pred.expected_yield_q_ekad / MILLING_RECOVERY).toFixed(2)
+    : pred.expected_yield_q_ekad;
+
+  const displayTotal = isRice
+    ? +(displayYield * data.area_ekad).toFixed(2)
+    : pred.total_expected_production_quintals;
+
+  document.getElementById("res-yield").textContent = isRice
+    ? `${displayYield} q/ekad (Paddy)`
+    : `${displayYield} q/ekad`;
+
+  if (isRice) {
+    const latestPaddy = +(pred.latest_des_yield_q_ekad / MILLING_RECOVERY).toFixed(2);
+    document.getElementById(
+      "res-des-compare"
+    ).textContent = `DES Milled Rice: ${pred.expected_yield_q_ekad} q/ekad (67%) · Latest DES (${pred.latest_des_observed_year}): ${latestPaddy} q/ekad Paddy`;
+  } else {
+    document.getElementById(
+      "res-des-compare"
+    ).textContent = `Latest DES (${pred.latest_des_observed_year}): ${pred.latest_des_yield_q_ekad} q/ekad`;
+  }
+
+  document.getElementById("res-total").textContent = `${displayTotal} q`;
+  document.getElementById("res-area-sub").textContent = isRice
+    ? `Across ${data.area_ekad} ekad (raw paddy)`
+    : `Across ${data.area_ekad} ekad`;
 
   if (pau.variety_details) {
-    document.getElementById(
-      "res-pau-bench"
-    ).textContent = `${pau.variety_details.pau_avg_yield_q_ekad} q/ekad`;
-    const gap = pau.yield_gap_vs_pau_q_ekad;
-    document.getElementById("res-pau-gap").textContent =
-      gap > 0
-        ? `${gap} q/ekad upside potential vs district avg`
-        : `${Math.abs(gap)} q/ekad above PAU average`;
-  } else {
-    document.getElementById("res-pau-bench").textContent = "N/A";
-    document.getElementById("res-pau-gap").textContent = "No PAU variety entry";
-  }
-
-  const fertPills = document.getElementById("fert-pills");
-  fertPills.innerHTML = "";
-  if (pau.total_fertilizer_bags_for_area) {
-    Object.entries(pau.total_fertilizer_bags_for_area).forEach(([fert, bags]) => {
-      const kg = pau.total_fertilizer_kg_for_area[fert];
-      const div = document.createElement("div");
-      div.className = "pill";
-      div.innerHTML = `${fert}: <strong>${bags} bags</strong> (${kg} kg)`;
-      fertPills.appendChild(div);
-    });
-    document.getElementById(
-      "sowing-note"
-    ).textContent = `Variety: ${pau.selected_variety} · Maturity: ${pau.variety_details.maturity_days} days · Optimal Sowing: ${pau.variety_details.sowing_window}`;
-  } else {
-    fertPills.innerHTML = `<div class="pill">Consult PAU Ludhiana Package of Practices for exact dose.</div>`;
-    document.getElementById("sowing-note").textContent = "";
-  }
-
-  const irrPills = document.getElementById("irr-pills");
-  irrPills.innerHTML = `
-    <div class="pill">Zone: <strong>${data.nabard_agro_climatic_zone.code}</strong> (${data.nabard_agro_climatic_zone.name})</div>
-    <div class="pill">Tubewell Share: <strong>${irr.tubewell_share_pct ?? "N/A"}%</strong></div>
-    <div class="pill">Canal Share: <strong>${irr.canal_share_pct ?? "N/A"}%</strong></div>
-    <div class="pill">Irrigation Intensity: <strong>${irr.irrigation_intensity_pct ?? "N/A"}%</strong></div>
-  `;
-
-  resultsSection.classList.remove("hidden");
-}
-
-initApp();
+    const bench = pau.variety_details.pau_avg_yield_q_ek
