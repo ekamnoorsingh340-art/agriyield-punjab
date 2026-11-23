@@ -1,0 +1,6 @@
+pau_crop_group,pau_mean_benchmark_q_ekad,pau_min_duration_days,pau_max_duration_days,pau_variety_count,pau_top_variety,pau_top_variety_duration_days,pau_max_benchmark_q_ekad,rec_n_kg_ekad,rec_p2o5_kg_ekad,rec_k2o_kg_ekad,rec_urea_bags_ekad,rec_dap_bags_ekad,rec_mop_bags_ekad
+Basmati,22.75,115.0,138.0,2,Pusa 1509,115.0,23.5,25.0,0.0,0.0,1.2,0.0,0.0
+Paddy,30.0,123.0,123.0,1,PR 126,123.0,30.0,42.0,0.0,0.0,2.0,0.0,0.0
+Potato,112.5,85.0,90.0,2,Kufri Pukhraj,85.0,115.0,75.0,25.0,25.0,3.2,1.1,0.8
+Summer_Moong,5.15,60.0,62.0,2,SML 1827,62.0,5.8,5.0,16.0,0.0,0.0,0.7,0.0
+Wheat,22.23,130.0,155.0,3,PBW 826,148.0,24.0,50.0,25.0,0.0,2.0,1.1,0.0
