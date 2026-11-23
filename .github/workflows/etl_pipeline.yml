@@ -33,6 +33,7 @@ jobs:
         run: |
           python -m etl.parse_irrigation --raw-dir data/raw --out-dir data/processed
           python -m etl.parse_des_crops --input-file "data/raw/horizontal_crop_vertical_year_report (1).xls" --out-dir data/processed
+          python -m etl.build_training_dataset --des-csv data/processed/des_punjab_crop_yield_1997_2023.csv --irr-csv data/processed/punjab_district_irrigation_2020_2025.csv --pau-json data/pau_benchmarks.json --out-dir data/processed
 
       - name: Commit processed CSV datasets
         run: |
