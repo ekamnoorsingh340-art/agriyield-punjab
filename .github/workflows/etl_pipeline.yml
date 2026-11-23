@@ -34,11 +34,12 @@ jobs:
           python -m etl.parse_irrigation --raw-dir data/raw --out-dir data/processed
           python -m etl.parse_des_crops --input-file "data/raw/horizontal_crop_vertical_year_report (1).xls" --out-dir data/processed
           python -m etl.build_training_dataset --des-csv data/processed/des_punjab_crop_yield_1997_2023.csv --irr-csv data/processed/punjab_district_irrigation_2020_2025.csv --pau-json data/pau_benchmarks.json --out-dir data/processed
+          python -m ml.train_yield_model --master-csv data/processed/agriyield_punjab_master_panel.csv --models-dir models
 
       - name: Commit processed CSV datasets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f data/processed/*.csv
-          git diff --staged --quiet || git commit -m "chore(etl): update processed irrigation and DES crop CSVs"
+          git add -f data/processed/*.csv models/*.joblib models/*.json
+          git diff --staged --quiet || git commit -m "chore(etl-ml): update processed datasets and trained yield model"
           git push
