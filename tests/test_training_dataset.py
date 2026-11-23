@@ -41,3 +41,5 @@ def test_master_panel_integrity(tmp_path: Path) -> None:
 
     # PAU benchmark summary must include Paddy, Wheat, Potato, Summer_Moong
     assert set(pau_summary["pau_crop_group"]) == {"Paddy", "Wheat", "Potato", "Summer_Moong"}
+    # PAU benchmark summary must include Basmati, Paddy, Wheat, Potato, Summer_Moong
+    assert set(pau_summary["pau_crop_group"]) == {"Basmati", "Paddy", "Wheat", "Potato", "Summer_Moong"}
