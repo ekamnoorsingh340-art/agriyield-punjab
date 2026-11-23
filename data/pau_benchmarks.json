@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "schema_name": "pau_ludhiana_agronomic_benchmarks",
+    "version": "1.0.1",
+    "source": "Punjab Agricultural University (PAU), Ludhiana - Package of Practices for Crops of Punjab (Kharif 2024 & Rabi 2024-25)",
+    "verification_status": "compiled_from_pau_package_of_practices",
+    "yield_unit": "Quintals_Per_Ekad",
+    "area_conversion_factor": 2.471,
+    "fertilizer_bag_weights_kg": {
+      "Urea": 45,
+      "DAP": 50,
+      "MOP": 50
+    }
+  },
+  "varieties": {
+    "PR 126": {
+      "crop": "Paddy",
+      "season": "Kharif",
+      "duration_days": 123,
+      "duration_basis": "seed_to_seed",
+      "pau_avg_yield_q_ekad": 30.0,
+      "optimal_sowing_window": "June 25 - July 10 (Transplanting)",
+      "recommended_npk_kg_ekad": {"N": 42, "P2O5": 0, "K2O": 0},
+      "recommended_fertilizer_kg_ekad": {"Urea": 90, "DAP": 0, "MOP": 0},
+      "recommended_bags_ekad": {"Urea": 2.0, "DAP": 0.0, "MOP": 0.0},
+      "agronomic_notes": "Short-duration variety (~93 days post-transplant); skip DAP if preceding wheat received full recommended phosphorus."
+    },
+    "Pusa 1509": {
+      "crop": "Basmati",
+      "season": "Kharif",
+      "duration_days": 115,
+      "duration_basis": "seed_to_seed",
+      "pau_avg_yield_q_ekad": 23.5,
+      "optimal_sowing_window": "July 1 - July 20 (Transplanting)",
+      "recommended_npk_kg_ekad": {"N": 25, "P2O5": 0, "K2O": 0},
+      "recommended_fertilizer_kg_ekad": {"Urea": 55, "DAP": 0, "MOP": 0},
+      "recommended_bags_ekad": {"Urea": 1.2, "DAP": 0.0, "MOP": 0.0},
+      "agronomic_notes": "Early-maturing semi-dwarf Basmati (~85-90 days post-transplant); sensitive to excess nitrogen."
+    },
+    "Pusa 1718": {
+      "crop": "Basmati",
+      "season": "Kharif",
+      "duration_days": 138,
+      "duration_basis": "seed_to_seed",
+      "pau_avg_yield_q_ekad": 22.0,
+      "optimal_sowing_window": "July 1 - July 15 (Transplanting)",
+      "recommended_npk_kg_ekad": {"N": 25, "P2O5": 0, "K2O": 0},
+      "recommended_fertilizer_kg_ekad": {"Urea": 55, "DAP": 0, "MOP": 0},
+      "recommended_bags_ekad": {"Urea": 1.2, "DAP": 0.0, "MOP": 0.0},
+      "agronomic_notes": "Bacterial leaf blight resistant improved Pusa Basmati 1121 selection."
+    },
+    "PBW 826": {
+      "crop": "Wheat",
+      "season": "Rabi",
+      "duration_days": 148,
+      "duration_basis": "seed_to_seed",
+      "pau_avg_yield_q_ekad": 24.0,
+      "optimal_sowing_window": "October 25 - November 15",
+      "recommended_npk_kg_ekad": {"N": 50, "P2O5": 25, "K2O": 0},
+      "recommended_fertilizer_kg_ekad": {"Urea": 90, "DAP": 55, "MOP": 0},
+      "recommended_bags_ekad": {"Urea": 2.0, "DAP": 1.1, "MOP": 0.0},
+      "agronomic_notes": "Top-yielding timely-sown irrigated wheat variety; 55 kg DAP supplies 25 kg P2O5 + ~10 kg N, so 90 kg Urea completes 50 kg N/ekad."
+    },
+    "Unnat PBW 343": {
+      "crop": "Wheat",
+      "season": "Rabi",
+      "duration_days": 155,
+      "duration_basis": "seed_to_seed",
+      "pau_avg_yield_q_ekad": 23.2,
+      "optimal_sowing_window": "October 25 - November 20",
+      "recommended_npk_kg_ekad": {"N": 50, "P2O5": 25, "K2O": 0},
+      "recommended_fertilizer_kg_ekad": {"Urea": 90, "DAP": 55, "MOP": 0},
+      "recommended_bags_ekad": {"Urea": 2.0, "DAP": 1.1, "MOP": 0.0},
+      "agronomic_notes": "Yellow and brown rust resistant cultivar adapted across irrigated plains."
+    },
+    "PBW 752": {
+      "crop": "Wheat",
+      "season": "Rabi",
+      "duration_days": 130,
+      "duration_basis": "seed_to_seed",
+      "pau_avg_yield_q_ekad": 19.5,
+      "optimal_sowing_window": "November 26 - December 25",
+      "recommended_npk_kg_ekad": {"N": 50, "P2O5": 25, "K2O": 0},
+      "recommended_fertilizer_kg_ekad": {"Urea": 90, "DAP": 55, "MOP": 0},
+      "recommended_bags_ekad": {"Urea": 2.0, "DAP": 1.1, "MOP": 0.0},
+      "agronomic_notes": "Recommended specifically for late-sown irrigated conditions (such as post-potato harvest)."
+    },
+    "Kufri Pukhraj": {
+      "crop": "Potato",
+      "season": "Autumn_Rabi",
+      "duration_days": 85,
+      "duration_basis": "planting_to_haulm_cutting",
+      "pau_avg_yield_q_ekad": 115.0,
+      "optimal_sowing_window": "October 1 - October 20",
+      "recommended_npk_kg_ekad": {"N": 75, "P2O5": 25, "K2O": 25},
+      "recommended_fertilizer_kg_ekad": {"Urea": 142, "DAP": 55, "MOP": 42},
+      "recommended_bags_ekad": {"Urea": 3.2, "DAP": 1.1, "MOP": 0.8},
+      "agronomic_notes": "Early-bulking high-yield table potato cultivar; PAU dose is 75 kg N, 25 kg P2O5, 25 kg K2O per ekad."
+    },
+    "Punjab Potato 103": {
+      "crop": "Potato",
+      "season": "Autumn_Rabi",
+      "duration_days": 90,
+      "duration_basis": "planting_to_haulm_cutting",
+      "pau_avg_yield_q_ekad": 110.0,
+      "optimal_sowing_window": "October 5 - October 25",
+      "recommended_npk_kg_ekad": {"N": 75, "P2O5": 25, "K2O": 25},
+      "recommended_fertilizer_kg_ekad": {"Urea": 142, "DAP": 55, "MOP": 42},
+      "recommended_bags_ekad": {"Urea": 3.2, "DAP": 1.1, "MOP": 0.8},
+      "agronomic_notes": "PAU cultivar suited for autumn table production and multi-crop rotations."
+    },
+    "SML 1827": {
+      "crop": "Summer_Moong",
+      "season": "Zaid_Summer",
+      "duration_days": 62,
+      "duration_basis": "seed_to_seed",
+      "pau_avg_yield_q_ekad": 5.8,
+      "optimal_sowing_window": "March 20 - April 10",
+      "recommended_npk_kg_ekad": {"N": 5, "P2O5": 16, "K2O": 0},
+      "recommended_fertilizer_kg_ekad": {"Urea": 0, "DAP": 35, "MOP": 0},
+      "recommended_bags_ekad": {"Urea": 0.0, "DAP": 0.7, "MOP": 0.0},
+      "agronomic_notes": "Short-duration summer pulse; 35 kg DAP/ekad supplies both 16 kg P2O5 and ~6 kg starter N without extra Urea."
+    },
+    "SML 668": {
+      "crop": "Summer_Moong",
+      "season": "Zaid_Summer",
+      "duration_days": 60,
+      "duration_basis": "seed_to_seed",
+      "pau_avg_yield_q_ekad": 4.5,
+      "optimal_sowing_window": "March 20 - April 10",
+      "recommended_npk_kg_ekad": {"N": 5, "P2O5": 16, "K2O": 0},
+      "recommended_fertilizer_kg_ekad": {"Urea": 0, "DAP": 35, "MOP": 0},
+      "recommended_bags_ekad": {"Urea": 0.0, "DAP": 0.7, "MOP": 0.0},
+      "agronomic_notes": "Bold-seeded Yellow Mosaic Virus resistant summer moong variety."
+    }
+  }
+}
