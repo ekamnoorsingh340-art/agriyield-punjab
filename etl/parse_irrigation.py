@@ -37,45 +37,52 @@ def parse_single_irrigation_html(filepath: Path) -> pd.DataFrame:
             f"Unexpected row layout in {filepath}: row0='{banner_cell}', row24='{total_cell}'"
         )
 
-    sub = raw.iloc[1:24].copy()
-    for col_idx in range(2, 20):
-        sub.iloc[:, col_idx] = pd.to_numeric(
-            sub.iloc[:, col_idx].astype(str).str.strip().replace("-", "0"),
-            errors="raise",
-        )
+    sub = raw.iloc[1:24].reset_index(drop=True)
+    districts = sub.iloc[:, 1].astype(str).str.strip().tolist()
+
+    # Build a fresh numeric matrix (avoids pandas 3.0 strict 'str' dtype iloc assignment error)
+    num_df = pd.DataFrame(
+        {
+            col_idx: pd.to_numeric(
+                sub.iloc[:, col_idx].astype(str).str.strip().replace("-", "0"),
+                errors="raise",
+            ).astype(float)
+            for col_idx in range(2, 20)
+        }
+    )
 
     # Verify internal row arithmetic (0.00 ha tolerance)
-    net_sum = sub.iloc[:, 4] + sub.iloc[:, 5] + sub.iloc[:, 8] + sub.iloc[:, 9]
-    gross_sum = sub.iloc[:, 13] + sub.iloc[:, 14] + sub.iloc[:, 17] + sub.iloc[:, 18]
-    if (net_sum - sub.iloc[:, 10]).abs().max() > 1e-6:
+    net_sum = num_df[4] + num_df[5] + num_df[8] + num_df[9]
+    gross_sum = num_df[13] + num_df[14] + num_df[17] + num_df[18]
+    if (net_sum - num_df[10]).abs().max() > 1e-6:
         raise ValueError(f"Net irrigated area row sum mismatch in {filepath}")
-    if (gross_sum - sub.iloc[:, 19]).abs().max() > 1e-6:
+    if (gross_sum - num_df[19]).abs().max() > 1e-6:
         raise ValueError(f"Gross irrigated area row sum mismatch in {filepath}")
 
     rows = []
-    for _, row in sub.iterrows():
-        raw_dist = str(row.iloc[1]).strip()
+    for idx, raw_dist in enumerate(districts):
         zone_info = resolve_district_classification(raw_dist)
+        vals = num_df.iloc[idx]
 
-        net_canal_govt = float(row.iloc[2])
-        net_canal_priv = float(row.iloc[3])
-        net_canal_tot = float(row.iloc[4])
-        net_tank = float(row.iloc[5])
-        net_tw = float(row.iloc[6])
-        net_other_well = float(row.iloc[7])
-        net_well_tot = float(row.iloc[8])
-        net_other_src = float(row.iloc[9])
-        net_tot = float(row.iloc[10])
+        net_canal_govt = float(vals[2])
+        net_canal_priv = float(vals[3])
+        net_canal_tot = float(vals[4])
+        net_tank = float(vals[5])
+        net_tw = float(vals[6])
+        net_other_well = float(vals[7])
+        net_well_tot = float(vals[8])
+        net_other_src = float(vals[9])
+        net_tot = float(vals[10])
 
-        gross_canal_govt = float(row.iloc[11])
-        gross_canal_priv = float(row.iloc[12])
-        gross_canal_tot = float(row.iloc[13])
-        gross_tank = float(row.iloc[14])
-        gross_tw = float(row.iloc[15])
-        gross_other_well = float(row.iloc[16])
-        gross_well_tot = float(row.iloc[17])
-        gross_other_src = float(row.iloc[18])
-        gross_tot = float(row.iloc[19])
+        gross_canal_govt = float(vals[11])
+        gross_canal_priv = float(vals[12])
+        gross_canal_tot = float(vals[13])
+        gross_tank = float(vals[14])
+        gross_tw = float(vals[15])
+        gross_other_well = float(vals[16])
+        gross_well_tot = float(vals[17])
+        gross_other_src = float(vals[18])
+        gross_tot = float(vals[19])
 
         tw_share_pct = round((net_tw / net_tot) * 100, 2) if net_tot > 0 else 0.0
         canal_share_pct = round((net_canal_tot / net_tot) * 100, 2) if net_tot > 0 else 0.0
