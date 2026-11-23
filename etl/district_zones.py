@@ -148,8 +148,11 @@ def resolve_district_classification(
     pau_spatial_overlay: Optional[dict] = None,
 ) -> dict:
     norm_key = normalize_district_key(raw_district)
+    if norm_key == "firozepur":
+        norm_key = "ferozepur"
     if norm_key not in NABARD_DISTRICT_BASE_MAP:
         raise ValueError(f"Unrecognized Punjab district: '{raw_district}' (normalized: '{norm_key}')")
+
 
     az_code = NABARD_DISTRICT_BASE_MAP[norm_key]
     pau_zone_id = None
