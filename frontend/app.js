@@ -180,19 +180,30 @@ function renderResults(data) {
     const gap = +(bench - displayYield).toFixed(2);
     document.getElementById("res-pau-gap").textContent =
       gap > 0
-        ? `${gap} q/ekad upside potential vs district avg`
-        : `${Math.abs(gap)} q/ekad above PAU average`;
-  } else {
-    document.getElementById("res-pau-bench").textContent = "N/A";
-    document.getElementById("res-pau-gap").textContent = "No PAU variety entry";
-  }
-
-  const fertPills = document.getElementById("fert-pills");
+          const fertPills = document.getElementById("fert-pills");
   fertPills.innerHTML = "";
   if (pau.total_fertilizer_bags_for_area) {
     Object.entries(pau.total_fertilizer_bags_for_area).forEach(([fert, bags]) => {
       const kg = pau.total_fertilizer_kg_for_area[fert];
       const div = document.createElement("div");
+      div.className = "pill";
+      div.innerHTML = `${fert}: <strong>${bags} bags</strong> (${kg} kg)`;
+      fertPills.appendChild(div);
+    });
+
+    const v = pau.variety_details || {};
+    const days = v.maturity_days ?? v.duration_days ?? v.crop_duration_days;
+    const sowing = v.sowing_window ?? v.recommended_sowing ?? v.sowing_time ?? v.transplanting_window;
+    const parts = [`Variety: ${pau.selected_variety}`];
+    if (days) parts.push(`Maturity: ${days} days`);
+    if (sowing) parts.push(`Optimal Sowing: ${sowing}`);
+    if (v.notes) parts.push(v.notes);
+    document.getElementById("sowing-note").textContent = parts.join(" · ");
+  } else {
+    fertPills.innerHTML = `<div class="pill">Consult PAU Ludhiana Package of Practices for exact dose.</div>`;
+    document.getElementById("sowing-note").textContent = "";
+  }
+
       div.className = "pill";
       div.innerHTML = `${fert}: <strong>${bags} bags</strong> (${kg} kg)`;
       fertPills.appendChild(div);
