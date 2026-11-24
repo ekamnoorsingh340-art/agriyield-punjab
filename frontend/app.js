@@ -394,16 +394,28 @@ const CROP_STANDARD_BENCHMARKS = {
   Potato: 165.0   // Punjab regional irrigated potato baseline
 };
 
-// Default MSP / Mandi Rates (₹/quintal)
+// Default MSP / Mandi Rates (₹/quintal - Kharif 2026-27 & Rabi 2027-28)
 const DEFAULT_MANDI_RATES = {
-  Rice: 2461,      // Grade A Paddy MSP 2026-27 (Common: ₹2441)
-  Basmati: 3800,   // Indicative Punjab Mandi Open Market Rate
-  Wheat: 2610,     // Rabi 2027-28 MSP
-  Potato: 1100,    // Indicative Punjab Mandi / Cold-Store Benchmark
-  Moong: 8780,     // Kharif 2026-27 MSP
-  Cotton: 8667,    // Long Staple MSP 2026-27
-  Maize: 2410      // Kharif 2026-27 MSP
+  Rice: 2461,         // Grade A Paddy MSP 2026-27 (Common: ₹2441)
+  Basmati: 3800,      // Indicative Punjab Mandi Open Market Rate
+  Wheat: 2610,        // Rabi 2027-28 MSP
+  Potato: 1100,       // Indicative Punjab Mandi / Cold-Store Benchmark
+  Moong: 8780,        // Kharif 2026-27 MSP (matches "Moong" & "Moong(Green Gram)")
+  Urad: 8200,         // Kharif 2026-27 MSP
+  Arhar: 8450,        // Kharif 2026-27 MSP
+  Gram: 5958,         // Rabi 2027-28 MSP
+  Masoor: 7390,       // Rabi 2027-28 MSP
+  Mustard: 6613,      // Rabi 2027-28 MSP
+  Cotton: 8667,       // Long Staple MSP 2026-27
+  Maize: 2410,        // Kharif 2026-27 MSP
+  Bajra: 2900,        // Kharif 2026-27 MSP
+  Jowar: 4023,        // Kharif 2026-27 MSP
+  Sunflower: 8343,    // Kharif 2026-27 MSP
+  Groundnut: 7517,    // Kharif 2026-27 MSP
+  Sesamum: 10346,     // Kharif 2026-27 MSP
+  Sugarcane: 365      // FRP 2026-27 (₹/quintal)
 };
+
 
 let METADATA = null;
 let LAST_API_DATA = null;
