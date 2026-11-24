@@ -180,7 +180,14 @@ function renderResults(data) {
     const gap = +(bench - displayYield).toFixed(2);
     document.getElementById("res-pau-gap").textContent =
       gap > 0
-          const fertPills = document.getElementById("fert-pills");
+        ? `${gap} q/ekad upside potential vs district avg`
+        : `${Math.abs(gap)} q/ekad above PAU average`;
+  } else {
+    document.getElementById("res-pau-bench").textContent = "N/A";
+    document.getElementById("res-pau-gap").textContent = "No PAU variety entry";
+  }
+
+  const fertPills = document.getElementById("fert-pills");
   fertPills.innerHTML = "";
   if (pau.total_fertilizer_bags_for_area) {
     Object.entries(pau.total_fertilizer_bags_for_area).forEach(([fert, bags]) => {
@@ -199,18 +206,6 @@ function renderResults(data) {
     if (sowing) parts.push(`Optimal Sowing: ${sowing}`);
     if (v.notes) parts.push(v.notes);
     document.getElementById("sowing-note").textContent = parts.join(" · ");
-  } else {
-    fertPills.innerHTML = `<div class="pill">Consult PAU Ludhiana Package of Practices for exact dose.</div>`;
-    document.getElementById("sowing-note").textContent = "";
-  }
-
-      div.className = "pill";
-      div.innerHTML = `${fert}: <strong>${bags} bags</strong> (${kg} kg)`;
-      fertPills.appendChild(div);
-    });
-    document.getElementById(
-      "sowing-note"
-    ).textContent = `Variety: ${pau.selected_variety} · Maturity: ${pau.variety_details.maturity_days} days · Optimal Sowing: ${pau.variety_details.sowing_window}`;
   } else {
     fertPills.innerHTML = `<div class="pill">Consult PAU Ludhiana Package of Practices for exact dose.</div>`;
     document.getElementById("sowing-note").textContent = "";
