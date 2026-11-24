@@ -1,6 +1,6 @@
 const API_BASE = "https://agriyield-punjab.onrender.com";
 
-// Full Punjab Variety Catalog (PAU Recommended + Farmer High-Yield Pusa Lines)
+// Full Punjab Variety Catalog (PAU Recommended + Farmer High-Yield Pusa Lines + PAU Potato Series)
 const PUNJAB_VARIETY_CATALOG = {
   Rice: [
     {
@@ -286,21 +286,120 @@ const PUNJAB_VARIETY_CATALOG = {
       agronomyNote:
         "Specifically bred for late sowing after potato, cotton, or long-duration paddy—tolerates late-season March heat without severe shriveling."
     }
+  ],
+  Potato: [
+    {
+      name: "Punjab Potato 102 (PP-102)",
+      backendKey: "PP-102",
+      type: "PAU Peak-Yield Table Potato",
+      benchmark: 184.0,
+      seedToSeedDays: "100–110 days",
+      fieldDays: "Main Autumn Season",
+      sowingWindow: "Oct 1 – Oct 20 (Peak Autumn Planting)",
+      waterDemand: "7–8 light ridge irrigations (keep soil moist during tuber bulking)",
+      status: "PAU Recommended (Highest Yield)",
+      restricted: false,
+      fertSchedule:
+        "Apply 20 tonnes FYM + 110 kg Urea (2.4 bags), 135 kg SSP (2.7 bags), and 40 kg MOP (0.8 bag) per ekad. Apply half Urea + full SSP & MOP at planting; remaining half Urea at earthing-up (25–30 DAP).",
+      agronomyNote:
+        "Highest-yielding potato variety released by PAU Ludhiana (184 q/ekad average). Produces uniform oval-round, shallow-eyed tubers with light-brown skin and creamy-yellow flesh."
+    },
+    {
+      name: "Punjab Potato 103 (PP-103)",
+      backendKey: "PP-103",
+      type: "PAU 80-Day Early-Bulking Potato",
+      benchmark: 142.0,
+      seedToSeedDays: "80–90 days (180 q/ekad at full maturity)",
+      fieldDays: "Early-Harvest / 4-Crop Rotation",
+      sowingWindow: "Sep 25 – Oct 15 (Harvest late Dec for PBW 752 wheat)",
+      waterDemand: "6–7 light ridge irrigations",
+      status: "PAU Recommended (Early Rotation)",
+      restricted: false,
+      fertSchedule:
+        "Apply 20 tonnes FYM + 110 kg Urea (half at planting, half at earthing-up at 25 DAP) + 135 kg SSP + 40 kg MOP per ekad.",
+      agronomyNote:
+        "PAU's extra-early bulking specialist—delivers ~142 q/ekad in just 80–90 days (or 180 q/ekad if held longer), making it ideal before late-sown PBW 752 wheat."
+    },
+    {
+      name: "Punjab Potato 101 (PP-101)",
+      backendKey: "PP-101",
+      type: "PAU Early-Bulking Table Potato",
+      benchmark: 178.0,
+      seedToSeedDays: "90–100 days",
+      fieldDays: "Early–Main Autumn Season",
+      sowingWindow: "Sep 25 – Oct 15",
+      waterDemand: "6–8 light ridge irrigations",
+      status: "PAU Recommended",
+      restricted: false,
+      fertSchedule:
+        "Apply 20 tonnes FYM + 110 kg Urea (split at planting & earthing-up) + 135 kg SSP + 40 kg MOP per ekad.",
+      agronomyNote:
+        "Early-bulking PAU table variety with uniform oval-round light-brown tubers and creamy-white flesh suited for fresh mandi sales."
+    },
+    {
+      name: "Punjab Potato 104 (PP-104)",
+      backendKey: "PP-104",
+      type: "PAU Late-Blight Resistant Potato",
+      benchmark: 174.0,
+      seedToSeedDays: "105–115 days",
+      fieldDays: "Medium-Late Autumn Season",
+      sowingWindow: "Oct 5 – Oct 25",
+      waterDemand: "7–8 light ridge irrigations",
+      status: "PAU Recommended (Blight Shield)",
+      restricted: false,
+      fertSchedule:
+        "Apply 20 tonnes FYM + 110 kg Urea (split) + 135 kg SSP + 40 kg MOP per ekad.",
+      agronomyNote:
+        "PAU variety carrying moderate resistance to Late Blight—recommended for humid pockets or fields with recurring blight pressure."
+    },
+    {
+      name: "Kufri Sindhuri (Lal Sindhuri)",
+      backendKey: "Kufri Sindhuri",
+      type: "Red-Skinned Storage Potato",
+      benchmark: 135.0,
+      seedToSeedDays: "110–120 days",
+      fieldDays: "Main / Late-Planted Autumn",
+      sowingWindow: "Oct 10 – Nov 10 (Tolerates planting up to mid-November)",
+      waterDemand: "7–8 light irrigations (tolerates mild water/heat stress)",
+      status: "PAU Recommended (Red Skin)",
+      restricted: false,
+      fertSchedule:
+        "Apply 20 tonnes FYM + 110 kg Urea (half at sowing, half at 30 DAP earthing-up) + 135 kg SSP + 40 kg MOP per ekad.",
+      agronomyNote:
+        "Classic round, red-skinned potato with dull-white flesh. Known for slow seed degeneration, frost/heat tolerance, and top cold-storage keeping quality."
+    },
+    {
+      name: "Kufri Pukhraj",
+      backendKey: "Kufri Pukhraj",
+      type: "Early Table Potato",
+      benchmark: 155.0,
+      seedToSeedDays: "75–90 days",
+      fieldDays: "Early Autumn Season",
+      sowingWindow: "Sep 25 – Oct 15",
+      waterDemand: "6–7 light ridge irrigations",
+      status: "PAU Recommended",
+      restricted: false,
+      fertSchedule:
+        "Apply 20 tonnes FYM + 110 kg Urea (split) + 135 kg SSP + 40 kg MOP per ekad.",
+      agronomyNote:
+        "Popular early-maturing large oval white-skinned potato resistant to early blight."
+    }
   ]
 };
 
 // State Standard Variety Baselines for Varietal Adjustment Multiplier
 const CROP_STANDARD_BENCHMARKS = {
-  Rice: 30.0,   // PR 126 state standard baseline
-  Wheat: 23.5   // Unnat PBW 343 state standard baseline
+  Rice: 30.0,     // PR 126 state standard baseline
+  Wheat: 23.5,    // Unnat PBW 343 state standard baseline
+  Potato: 165.0   // Punjab regional irrigated potato baseline
 };
 
-// Default MSP / Mandi Rates (₹/quintal) - Kharif 2026-27 & Rabi 2027-28 CCEA Benchmarks
+// Default MSP / Mandi Rates (₹/quintal)
 const DEFAULT_MANDI_RATES = {
   Rice: 2461,      // Grade A Paddy MSP 2026-27 (Common: ₹2441)
   Basmati: 3800,   // Indicative Punjab Mandi Open Market Rate
   Wheat: 2610,     // Rabi 2027-28 MSP
-  Potato: 1100,    // Indicative Punjab Cold-Store / Mandi Benchmark
+  Potato: 1100,    // Indicative Punjab Mandi / Cold-Store Benchmark
   Moong: 8780,     // Kharif 2026-27 MSP
   Cotton: 8667,    // Long Staple MSP 2026-27
   Maize: 2410      // Kharif 2026-27 MSP
@@ -359,6 +458,12 @@ function populateCropSeasons() {
     if (c.crop === "Rice" && c.season === "Kharif") opt.selected = true;
     cropSeasonSelect.appendChild(opt);
   });
+
+  // Always include Potato (Autumn / Main) with PAU PP-101–104 & Kufri Sindhuri benchmarks
+  const potatoOpt = document.createElement("option");
+  potatoOpt.value = "Potato||Autumn";
+  potatoOpt.textContent = "Potato (Autumn / Main)";
+  cropSeasonSelect.appendChild(potatoOpt);
 
   populateVarieties();
 }
@@ -443,12 +548,70 @@ form.addEventListener("submit", async (e) => {
 
   try {
     const [crop, season] = cropSeasonSelect.value.split("||");
+    const areaEkad = parseFloat(areaInput.value);
     const catVar = getSelectedCatalogVariety();
+
+    // PAU Horticulture Benchmark Module for Potato (not in DES foodgrain dataset)
+    if (crop === "Potato") {
+      // Query Wheat/Rice for same district so we still pull real district irrigation & NABARD zone metadata
+      const refRes = await fetch(`${API_BASE}/predict`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          district: districtSelect.value,
+          crop: "Wheat",
+          season: "Rabi",
+          area_ekad: areaEkad,
+          variety: "PBW 826"
+        })
+      });
+      const refData = refRes.ok ? await refRes.json() : null;
+
+      const potatoData = {
+        district: districtSelect.value,
+        crop: "Potato",
+        season: "Autumn",
+        area_ekad: areaEkad,
+        is_pau_horticulture_module: true,
+        prediction: {
+          expected_yield_q_ekad: CROP_STANDARD_BENCHMARKS.Potato,
+          latest_des_observed_year: "PAU 2025",
+          latest_des_yield_q_ekad: CROP_STANDARD_BENCHMARKS.Potato
+        },
+        pau_advisory: {
+          variety_details: { pau_avg_yield_q_ekad: catVar ? catVar.benchmark : 165.0 },
+          total_fertilizer_bags_for_area: {
+            "Urea (45kg)": +(2.44 * areaEkad).toFixed(1),
+            "SSP (50kg)": +(2.7 * areaEkad).toFixed(1),
+            "MOP (50kg)": +(0.8 * areaEkad).toFixed(1)
+          },
+          total_fertilizer_kg_for_area: {
+            "Urea (45kg)": Math.round(110 * areaEkad),
+            "SSP (50kg)": Math.round(135 * areaEkad),
+            "MOP (50kg)": Math.round(40 * areaEkad)
+          }
+        },
+        nabard_agro_climatic_zone: refData?.nabard_agro_climatic_zone || {
+          code: "PB-AZ",
+          name: "Punjab Irrigated Plains"
+        },
+        district_irrigation_profile: refData?.district_irrigation_profile || {
+          tubewell_share_pct: 72,
+          canal_share_pct: 28,
+          irrigation_intensity_pct: 198
+        }
+      };
+
+      LAST_API_DATA = potatoData;
+      renderResults(potatoData);
+      return;
+    }
+
     const payload = {
       district: districtSelect.value,
       crop,
       season,
-      area_ekad: parseFloat(areaInput.value),
+      area_ekad: areaEkad,
       variety: catVar ? catVar.backendKey : varietySelect.value || null,
     };
 
@@ -487,7 +650,7 @@ function renderResults(data) {
   const isRice = (data.crop || "").toLowerCase() === "rice";
   const MILLING_RECOVERY = 0.67;
 
-  // Raw DES district baseline in quintals/ekad
+  // Raw district baseline in quintals/ekad
   const districtBaselineYield = isRice
     ? +(pred.expected_yield_q_ekad / MILLING_RECOVERY).toFixed(2)
     : pred.expected_yield_q_ekad;
@@ -521,6 +684,10 @@ function renderResults(data) {
     document.getElementById(
       "res-des-compare"
     ).textContent = `District ML Baseline: ${districtBaselineYield} q/ekad Paddy · Varietal Factor: ${varietyFactor.toFixed(2)}x (${catVar ? catVar.name : "Standard"})`;
+  } else if (data.is_pau_horticulture_module) {
+    document.getElementById(
+      "res-des-compare"
+    ).textContent = `PAU Ludhiana Trial Benchmark (${catVar ? catVar.name : "Potato"}) · 20 tonnes/ekad FYM recommended`;
   } else {
     document.getElementById(
       "res-des-compare"
@@ -544,7 +711,7 @@ function renderResults(data) {
     document.getElementById("res-pau-gap").textContent =
       gap > 0
         ? `+${gap} q/ekad ideal soil upside vs district forecast`
-        : `${Math.abs(gap)} q/ekad above variety benchmark`;
+        : `${Math.abs(gap) === 0 ? "Matches" : Math.abs(gap) + " q/ekad above"} PAU variety benchmark`;
   } else {
     document.getElementById("res-pau-bench").textContent = "N/A";
     document.getElementById("res-pau-gap").textContent = "District crop baseline";
@@ -621,7 +788,7 @@ function renderResults(data) {
   const tw = irr.tubewell_share_pct ?? 0;
   document.getElementById("district-advisory-text").textContent =
     tw >= 60
-      ? `${data.district} relies heavily on groundwater tubewells (${tw}% share). Short-duration varieties like PR 126 or Pusa Basmati 1509 significantly reduce pumping costs and aquifer stress compared to 155–165 day Pusa lines.`
+      ? `${data.district} relies heavily on groundwater tubewells (${tw}% share). Short-duration varieties like PR 126, PB 1509, or early-bulking PP-103 reduce pumping load and fit cleanly into multi-crop rotations.`
       : `${data.district} benefits from strong canal irrigation coverage (${irr.canal_share_pct ?? 0}% share) alongside tubewells (${tw}%), supporting high double-cropping intensity (${irr.irrigation_intensity_pct ?? 0}%).`;
 
   welcomeCard.classList.add("hidden");
