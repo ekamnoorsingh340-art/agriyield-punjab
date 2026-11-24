@@ -4,7 +4,581 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AgriYield Punjab · ML Crop Yield & PAU Decision Support Portal</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg: #080d0b;
+      --surface: #0f1714;
+      --surface-alt: #141f1b;
+      --border: #1f312a;
+      --border-strong: #2c463c;
+      --text: #eaf3ef;
+      --text-muted: #9ab0a6;
+      --accent: #22c55e;
+      --accent-hover: #16a34a;
+      --accent-soft: rgba(34, 197, 94, 0.12);
+      --gold: #f59e0b;
+      --gold-soft: rgba(245, 158, 11, 0.14);
+      --danger: #ef4444;
+      --danger-soft: rgba(239, 68, 68, 0.13);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    /* Topbar */
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border-strong);
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+    }
+
+    .brand h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .pa-tag {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+
+    .tagline {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+
+    .status-badge.online {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: rgba(34, 197, 94, 0.35);
+    }
+
+    /* Hero Strip */
+    .hero-strip {
+      background: linear-gradient(180deg, rgba(20, 31, 27, 0.85) 0%, rgba(8, 13, 11, 0) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-copy h2 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .hero-copy p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .stat-chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+
+    .stat-num {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .stat-lbl {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    /* Main Workspace */
+    .workspace {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 28px;
+      padding-top: 30px;
+      padding-bottom: 44px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .control-panel {
+      position: sticky;
+      top: 20px;
+    }
+
+    .panel-head {
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .panel-head h3 {
+      font-size: 1.08rem;
+      margin-bottom: 4px;
+    }
+
+    .panel-head p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .form-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    label {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    select,
+    input {
+      width: 100%;
+      padding: 11px 13px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-size: 0.94rem;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    select:focus,
+    input:focus {
+      border-color: var(--accent);
+    }
+
+    .field-hint {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .btn-primary {
+      margin-top: 6px;
+      padding: 13px 18px;
+      border: none;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #04130a;
+      font-size: 0.96rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .mini-note {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Results Column */
+    .results-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .welcome-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .welcome-card p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .check-list li {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .check-list li strong {
+      color: var(--text);
+    }
+
+    /* Alert Banner for Restricted / High-Water Pusa Varieties */
+    .alert-banner {
+      background: var(--gold-soft);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-size: 0.9rem;
+      color: #fde68a;
+    }
+
+    .alert-banner.danger {
+      background: var(--danger-soft);
+      border-color: rgba(239, 68, 68, 0.45);
+      border-left-color: var(--danger);
+      color: #fecaca;
+    }
+
+    .alert-banner strong {
+      display: block;
+      font-size: 0.96rem;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .kpi-card {
+      padding: 20px;
+    }
+
+    .kpi-card.accent-green {
+      border-color: rgba(34, 197, 94, 0.4);
+      background: linear-gradient(145deg, #0f1714 0%, #10231a 100%);
+    }
+
+    .kpi-card.accent-gold {
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+
+    .kpi-label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .kpi-value {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .accent-green .kpi-value {
+      color: var(--accent);
+    }
+
+    .accent-gold .kpi-value {
+      color: var(--gold);
+    }
+
+    .kpi-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Detail Cards */
+    .card-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-header-row h3 {
+      font-size: 1.04rem;
+    }
+
+    .badge-pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border-strong);
+      color: var(--text-muted);
+    }
+
+    .badge-pill.warn {
+      background: var(--gold-soft);
+      border-color: rgba(245, 158, 11, 0.45);
+      color: var(--gold);
+    }
+
+    .badge-pill.ok {
+      background: var(--accent-soft);
+      border-color: rgba(34, 197, 94, 0.4);
+      color: var(--accent);
+    }
+
+    .specs-grid,
+    .pill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .spec-item,
+    .pill {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.88rem;
+    }
+
+    .spec-item span {
+      display: block;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+
+    .spec-item strong,
+    .pill strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .schedule-box {
+      margin-top: 14px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.87rem;
+      color: var(--text-muted);
+    }
+
+    .schedule-box strong {
+      color: var(--text);
+    }
+
+    .prose-note {
+      margin-top: 14px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* Editorial Reading Section */
+    .editorial-section {
+      border-top: 1px solid var(--border);
+      background: #0a110e;
+      padding: 46px 0;
+    }
+
+    .section-title-block {
+      margin-bottom: 24px;
+    }
+
+    .section-title-block h2 {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+
+    .section-title-block p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .editorial-card h4 {
+      font-size: 0.98rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .editorial-card p {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+    }
+
+    .editorial-card code {
+      background: var(--surface-alt);
+      padding: 1px 6px;
+      border-radius: 5px;
+      color: var(--text);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .error-box {
+      background: var(--danger-soft);
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      color: #fecaca;
+      padding: 11px 13px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .workspace,
+      .editorial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .control-panel {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .kpi-grid,
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -115,7 +689,7 @@
 
       <!-- Active Prediction Output -->
       <div id="results" class="results-stack hidden">
-        <!-- Variety Warning Banner (Shown for high-water / restricted Pusa varieties or special notes) -->
+        <!-- Variety Warning Banner (Shown for high-water / restricted Pusa varieties) -->
         <div id="variety-alert" class="alert-banner hidden"></div>
 
         <!-- Primary KPI Grid -->
