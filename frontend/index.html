@@ -3,204 +3,229 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AgriYield Punjab — Institutional Crop Yield & PAU Advisory</title>
-  <style>
-    :root {
-      --bg: #000000;
-      --card: #0f1419;
-      --border: #1f2937;
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --green: #10b981;
-      --green-dim: rgba(16, 185, 129, 0.14);
-      --amber: #f59e0b;
-      --red: #ef4444;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.5;
-      padding: 16px;
-      max-width: 820px;
-      margin: 0 auto;
-    }
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 14px;
-      margin-bottom: 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    h1 { font-size: 1.45rem; color: var(--green); letter-spacing: -0.02em; }
-    .subtitle { font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
-    .badge {
-      font-size: 0.78rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      color: var(--amber);
-      white-space: nowrap;
-    }
-    .badge.online { color: var(--green); border-color: var(--green); background: var(--green-dim); }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 16px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-      gap: 12px;
-    }
-    label {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 5px;
-      font-weight: 600;
-    }
-    select, input {
-      width: 100%;
-      background: #05080b;
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 10px 12px;
-      font-size: 0.95rem;
-    }
-    select:focus, input:focus { outline: none; border-color: var(--green); }
-    button {
-      width: 100%;
-      margin-top: 14px;
-      background: var(--green);
-      color: #03150e;
-      font-weight: 700;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      padding: 12px;
-      cursor: pointer;
-    }
-    button:disabled { opacity: 0.55; cursor: not-allowed; }
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-    .metric-box {
-      background: #05080b;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px;
-    }
-    .metric-label { font-size: 0.78rem; color: var(--muted); }
-    .metric-val { font-size: 1.35rem; font-weight: 700; color: var(--green); margin-top: 4px; }
-    .metric-sub { font-size: 0.76rem; color: var(--muted); margin-top: 2px; }
-    .section-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 6px;
-    }
-    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .pill {
-      background: #05080b;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 8px 12px;
-      font-size: 0.85rem;
-    }
-    .pill strong { color: var(--green); }
-    .error { color: var(--red); font-size: 0.88rem; margin-top: 10px; }
-    .hidden { display: none; }
-    footer {
-      text-align: center;
-      font-size: 0.76rem;
-      color: var(--muted);
-      margin-top: 24px;
-      padding-top: 12px;
-      border-top: 1px solid var(--border);
-    }
-  </style>
+  <title>AgriYield Punjab · ML Crop Yield & PAU Decision Support Portal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div>
-      <h1>AgriYield Punjab</h1>
-      <div class="subtitle">DES Punjab (1997–2023) &bull; District Irrigation &bull; PAU Ludhiana Package of Practices</div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">🌾</div>
+        <div>
+          <h1>AgriYield Punjab <span class="pa-tag">ਪੰਜਾਬ ਖੇਤੀਬਾੜੀ ਪੋਰਟਲ</span></h1>
+          <p class="tagline">District-Level ML Yield Intelligence · PAU Ludhiana Package of Practices · Punjab Mandi Economics</p>
+        </div>
+      </div>
+      <div class="status-wrap">
+        <span id="api-status" class="status-badge">Connecting to ML API...</span>
+      </div>
     </div>
-    <div id="api-status" class="badge">Connecting to ML API...</div>
   </header>
 
-  <section class="card">
-    <form id="predict-form">
-      <div class="grid">
-        <div>
-          <label for="district">District (Punjab)</label>
+  <section class="hero-strip">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h2>Data-Backed Crop Planning for Punjab Fields</h2>
+        <p>
+          Trained on <strong>27 years (1997–2023)</strong> of Directorate of Economics &amp; Statistics (DES) Punjab district records,
+          NABARD agro-climatic irrigation profiles, and PAU Ludhiana varietal benchmarks—calibrated to real farm units
+          (<strong>Ekad / ਏਕੜ</strong> and raw harvested <strong>Paddy / ਝੋਨਾ</strong>).
+        </p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-chip">
+          <span class="stat-num">22</span>
+          <span class="stat-lbl">Punjab Districts</span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-num">0.9898</span>
+          <span class="stat-lbl">Holdout R² Score</span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-num">17+</span>
+          <span class="stat-lbl">Paddy &amp; Wheat Varieties</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container workspace">
+    <!-- Left Column: Input Controls -->
+    <aside class="panel control-panel">
+      <div class="panel-head">
+        <h3>1. Field &amp; Crop Parameters</h3>
+        <p>Select your district, crop season, seed variety, and cultivated area in ekad.</p>
+      </div>
+
+      <form id="predict-form" class="form-stack">
+        <div class="field-group">
+          <label for="district">District (ਜ਼ਿਲ੍ਹਾ)</label>
           <select id="district" required></select>
         </div>
-        <div>
-          <label for="crop-season">Crop &amp; Season</label>
+
+        <div class="field-group">
+          <label for="crop-season">Crop &amp; Season (ਫ਼ਸਲ ਅਤੇ ਰੁੱਤ)</label>
           <select id="crop-season" required></select>
         </div>
-        <div>
-          <label for="variety">PAU Variety Benchmark</label>
+
+        <div class="field-group">
+          <label for="variety">Variety Selection (ਕਿਸਮ ਦੀ ਚੋਣ)</label>
           <select id="variety"></select>
+          <span id="variety-quick-tag" class="field-hint">Includes PAU recommended &amp; high-yield farmer lines</span>
         </div>
-        <div>
-          <label for="area-ekad">Land Area (Ekad / Acre)</label>
-          <input id="area-ekad" type="number" step="0.1" min="0.1" max="10000" value="4.0" required />
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="area-ekad">Land Area (Ekad / ਏਕੜ)</label>
+            <input type="number" id="area-ekad" value="4.0" min="0.25" max="500" step="0.25" required />
+          </div>
+          <div class="field-group">
+            <label for="mandi-rate">Mandi / MSP Rate (₹ / q)</label>
+            <input type="number" id="mandi-rate" value="2461" min="500" max="15000" step="10" required />
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn-primary">
+          Predict Yield &amp; Generate Field Report
+        </button>
+
+        <div id="error-box" class="error-box hidden"></div>
+      </form>
+
+      <div class="mini-note">
+        <strong>Unit Conversion Note:</strong> 1 Ekad (Acre) = 0.4047 Hectares. For Kharif Rice, DES milled-rice figures are automatically converted to raw harvested paddy (<em>dhan</em>) at 67% milling recovery.
+      </div>
+    </aside>
+
+    <!-- Right Column: Results & Deep Reading -->
+    <section class="results-column">
+      <!-- Placeholder before first run -->
+      <div id="welcome-placeholder" class="panel welcome-card">
+        <h3>Ready to Analyze Your Field</h3>
+        <p>
+          Choose your district and variety on the left and click <strong>Predict Yield &amp; Generate Field Report</strong> to view:
+        </p>
+        <ul class="check-list">
+          <li><strong>ML Expected Yield &amp; Total Harvest:</strong> District baseline vs. selected variety benchmark in quintals per ekad.</li>
+          <li><strong>Water &amp; Duration Risk Alerts:</strong> Honest trade-offs for long-duration Pusa lines (Chitta/Peeli/Dogar Pusa) vs. short-duration PAU varieties (PR 126).</li>
+          <li><strong>Gross Mandi Revenue Estimator (₹):</strong> Calculated live from your area and editable MSP / mandi rate.</li>
+          <li><strong>Split-Dose Fertilizer Schedule:</strong> Exact Urea, DAP, and MOP bag counts with timing windows.</li>
+        </ul>
+      </div>
+
+      <!-- Active Prediction Output -->
+      <div id="results" class="results-stack hidden">
+        <!-- Variety Warning Banner (Shown for high-water / restricted Pusa varieties or special notes) -->
+        <div id="variety-alert" class="alert-banner hidden"></div>
+
+        <!-- Primary KPI Grid -->
+        <div class="kpi-grid">
+          <div class="panel kpi-card accent-green">
+            <span class="kpi-label">Expected Field Yield</span>
+            <div id="res-yield" class="kpi-value">--</div>
+            <p id="res-des-compare" class="kpi-sub">--</p>
+          </div>
+
+          <div class="panel kpi-card">
+            <span class="kpi-label">Total Expected Harvest</span>
+            <div id="res-total" class="kpi-value">--</div>
+            <p id="res-area-sub" class="kpi-sub">--</p>
+          </div>
+
+          <div class="panel kpi-card">
+            <span class="kpi-label">Variety Benchmark Potential</span>
+            <div id="res-pau-bench" class="kpi-value">--</div>
+            <p id="res-pau-gap" class="kpi-sub">--</p>
+          </div>
+
+          <div class="panel kpi-card accent-gold">
+            <span class="kpi-label">Estimated Gross Mandi Return</span>
+            <div id="res-revenue" class="kpi-value">--</div>
+            <p id="res-revenue-sub" class="kpi-sub">--</p>
+          </div>
+        </div>
+
+        <!-- Variety Agronomic Profile Card -->
+        <div class="panel detail-card">
+          <div class="card-header-row">
+            <h3>Variety Agronomic &amp; Duration Profile</h3>
+            <span id="res-var-badge" class="badge-pill">--</span>
+          </div>
+          <div id="var-specs-grid" class="specs-grid"></div>
+          <p id="var-agronomy-note" class="prose-note"></p>
+        </div>
+
+        <!-- Fertilizer & Split Application Card -->
+        <div class="panel detail-card">
+          <div class="card-header-row">
+            <h3>PAU Fertilizer Bag Calculator &amp; Split Schedule</h3>
+            <span class="badge-pill">45 kg Urea · 50 kg DAP/MOP</span>
+          </div>
+          <div id="fert-pills" class="pill-grid"></div>
+          <div id="fert-schedule-box" class="schedule-box"></div>
+        </div>
+
+        <!-- District Irrigation & Rotation Advisory -->
+        <div class="panel detail-card">
+          <div class="card-header-row">
+            <h3>District Agro-Climatic, Groundwater &amp; Rotation Profile</h3>
+            <span id="res-zone-tag" class="badge-pill">--</span>
+          </div>
+          <div id="irr-pills" class="pill-grid"></div>
+          <p id="district-advisory-text" class="prose-note"></p>
         </div>
       </div>
-      <button id="submit-btn" type="submit">Predict Yield &amp; Calculate Inputs</button>
-      <div id="error-box" class="error hidden"></div>
-    </form>
+    </section>
+  </main>
+
+  <!-- Below-the-fold Educational & Methodology Reading Section -->
+  <section class="editorial-section">
+    <div class="container">
+      <div class="section-title-block">
+        <h2>Punjab Agronomic Reference &amp; Data Methodology</h2>
+        <p>Understanding varietal trade-offs, groundwater sustainability, and how AgriYield Punjab computes district forecasts.</p>
+      </div>
+
+      <div class="editorial-grid">
+        <article class="panel editorial-card">
+          <h4>1. PR 126 vs. Long-Duration Pusa Lines (Chitta / Peeli / Dogar)</h4>
+          <p>
+            While farmer-preferred lines like <strong>Chitta Pusa, Peeli Pusa (Pusa 44), and Dogar Pusa</strong> routinely yield
+            <strong>34–38 q/ekad</strong> on heavy tubewell soils, they require <strong>150–165 days</strong> seed-to-seed and 22–28% more
+            irrigation cycles—accelerating groundwater depletion across Central and Malwa dark zones and delaying November wheat/potato sowing.
+            By contrast, <strong>PR 126</strong> matures in ~123 days total (~93 days post-transplanting) when transplanted at the strict
+            <strong>30-day nursery stage</strong>, saving 4–5 irrigations and clearing fields early for timely Rabi sowing.
+          </p>
+        </article>
+
+        <article class="panel editorial-card">
+          <h4>2. Milled Rice vs. Raw Paddy (Dhan) Conversion</h4>
+          <p>
+            Official Directorate of Economics &amp; Statistics (DES) Punjab crop tables report rice yield in terms of
+            <strong>milled rice</strong> after hulling. Because standard paddy milling yields approximately <strong>67% head/broken rice</strong>
+            (1 quintal raw paddy = 67 kg rice), AgriYield Punjab divides raw model output by <code>0.67</code> for Kharif Rice so farmers see
+            actual trolley-weight paddy yields matching mandi weighbridges.
+          </p>
+        </article>
+
+        <article class="panel editorial-card">
+          <h4>3. Multi-Crop Rotation &amp; Soil Health in Punjab</h4>
+          <p>
+            Intensive paddy–wheat monoculture depletes soil zinc, iron, and organic carbon. Incorporating short-duration
+            <strong>Summer Moong (SML 1827 / SML 832, 60–65 days)</strong> after wheat harvest adds biological nitrogen fixation,
+            while pairing early-maturing paddy or Basmati (<strong>Pusa 1509 / PR 126</strong>) enables profitable autumn
+            <strong>Potato</strong> followed by late-sown <strong>PBW 752</strong> wheat.
+          </p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="results" class="hidden">
-    <div class="metrics">
-      <div class="metric-box">
-        <div class="metric-label">Predicted Yield</div>
-        <div id="res-yield" class="metric-val">--</div>
-        <div id="res-des-compare" class="metric-sub">--</div>
-      </div>
-      <div class="metric-box">
-        <div class="metric-label">Total Expected Production</div>
-        <div id="res-total" class="metric-val">--</div>
-        <div id="res-area-sub" class="metric-sub">--</div>
-      </div>
-      <div class="metric-box">
-        <div class="metric-label">PAU Variety Benchmark</div>
-        <div id="res-pau-bench" class="metric-val">--</div>
-        <div id="res-pau-gap" class="metric-sub">--</div>
-      </div>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><strong>AgriYield Punjab</strong> · Open-Source Agricultural Decision Support System</p>
+      <p>Data Sources: DES Punjab (1997–2023) · PAU Ludhiana Package of Practices · NABARD Agro-Climatic Atlas · CACP MSP Benchmarks</p>
     </div>
-
-    <div class="card">
-      <div class="section-title">PAU Fertilizer Bag Calculator (Scaled to Your Ekad Area)</div>
-      <div id="fert-pills" class="pill-row"></div>
-      <div id="sowing-note" class="metric-sub" style="margin-top: 10px;"></div>
-    </div>
-
-    <div class="card">
-      <div class="section-title">District Agro-Climatic &amp; Irrigation Profile</div>
-      <div id="irr-pills" class="pill-row"></div>
-    </div>
-  </section>
-
-  <footer>
-    Open-Source Agricultural Decision Support for Punjab Farmers &bull; Units: Quintals per Ekad (1 Ekad = 0.4047 Ha)
   </footer>
 
   <script src="app.js"></script>
