@@ -449,14 +449,18 @@ function getSelectedCatalogVariety() {
 }
 
 function updateDefaultMandiRate() {
-  const [crop] = (cropSeasonSelect.value || "").split("||");
+  const [crop = ""] = (cropSeasonSelect.value || "").split("||");
   const vObj = getSelectedCatalogVariety();
   if (vObj && vObj.type.includes("Basmati")) {
     mandiRateInput.value = DEFAULT_MANDI_RATES.Basmati;
     return;
   }
-  mandiRateInput.value = DEFAULT_MANDI_RATES[crop] || 2500;
+  const matchKey = Object.keys(DEFAULT_MANDI_RATES).find((k) =>
+    crop.toLowerCase().includes(k.toLowerCase())
+  );
+  mandiRateInput.value = matchKey ? DEFAULT_MANDI_RATES[matchKey] : 2500;
 }
+
 
 function populateCropSeasons() {
   const selectedDistrict = districtSelect.value;
