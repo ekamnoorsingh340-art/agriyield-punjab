@@ -289,6 +289,12 @@ const PUNJAB_VARIETY_CATALOG = {
   ]
 };
 
+// State Standard Variety Baselines for Varietal Adjustment Multiplier
+const CROP_STANDARD_BENCHMARKS = {
+  Rice: 30.0,   // PR 126 state standard baseline
+  Wheat: 23.5   // Unnat PBW 343 state standard baseline
+};
+
 // Default MSP / Mandi Rates (₹/quintal) - Kharif 2026-27 & Rabi 2027-28 CCEA Benchmarks
 const DEFAULT_MANDI_RATES = {
   Rice: 2461,      // Grade A Paddy MSP 2026-27 (Common: ₹2441)
@@ -481,11 +487,18 @@ function renderResults(data) {
   const isRice = (data.crop || "").toLowerCase() === "rice";
   const MILLING_RECOVERY = 0.67;
 
-  const districtYield = isRice
+  // Raw DES district baseline in quintals/ekad
+  const districtBaselineYield = isRice
     ? +(pred.expected_yield_q_ekad / MILLING_RECOVERY).toFixed(2)
     : pred.expected_yield_q_ekad;
 
-  const totalQuintals = +(districtYield * data.area_ekad).toFixed(2);
+  // Apply Varietal Adjustment Factor so Expected Yield responds to selected seed variety
+  const stdBenchmark = CROP_STANDARD_BENCHMARKS[data.crop];
+  const varietyFactor =
+    catVar && stdBenchmark ? catVar.benchmark / stdBenchmark : 1.0;
+
+  const adjustedYield = +(districtBaselineYield * varietyFactor).toFixed(2);
+  const totalQuintals = +(adjustedYield * data.area_ekad).toFixed(2);
   const mandiRate = parseFloat(mandiRateInput.value) || 0;
   const grossRevenue = totalQuintals * mandiRate;
 
@@ -499,20 +512,19 @@ function renderResults(data) {
     alertBox.classList.add("hidden");
   }
 
-  // KPI 1: Expected Field Yield
+  // KPI 1: Expected Field Yield (Variety-Adjusted)
   document.getElementById("res-yield").textContent = isRice
-    ? `${districtYield} q/ekad (Paddy)`
-    : `${districtYield} q/ekad`;
+    ? `${adjustedYield} q/ekad (Paddy)`
+    : `${adjustedYield} q/ekad`;
 
   if (isRice) {
-    const latestPaddy = +(pred.latest_des_yield_q_ekad / MILLING_RECOVERY).toFixed(2);
     document.getElementById(
       "res-des-compare"
-    ).textContent = `DES Milled Rice: ${pred.expected_yield_q_ekad} q/ekad (67%) · Latest DES (${pred.latest_des_observed_year}): ${latestPaddy} q/ekad Paddy`;
+    ).textContent = `District ML Baseline: ${districtBaselineYield} q/ekad Paddy · Varietal Factor: ${varietyFactor.toFixed(2)}x (${catVar ? catVar.name : "Standard"})`;
   } else {
     document.getElementById(
       "res-des-compare"
-    ).textContent = `Latest DES Observed (${pred.latest_des_observed_year}): ${pred.latest_des_yield_q_ekad} q/ekad`;
+    ).textContent = `District ML Baseline: ${districtBaselineYield} q/ekad · Latest DES (${pred.latest_des_observed_year}): ${pred.latest_des_yield_q_ekad} q/ekad`;
   }
 
   // KPI 2: Total Expected Harvest
@@ -528,10 +540,10 @@ function renderResults(data) {
 
   if (bench) {
     document.getElementById("res-pau-bench").textContent = `${bench} q/ekad`;
-    const gap = +(bench - districtYield).toFixed(2);
+    const gap = +(bench - adjustedYield).toFixed(2);
     document.getElementById("res-pau-gap").textContent =
       gap > 0
-        ? `+${gap} q/ekad varietal upside potential vs district baseline`
+        ? `+${gap} q/ekad ideal soil upside vs district forecast`
         : `${Math.abs(gap)} q/ekad above variety benchmark`;
   } else {
     document.getElementById("res-pau-bench").textContent = "N/A";
