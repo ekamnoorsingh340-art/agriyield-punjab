@@ -143,7 +143,6 @@ function renderResults(data) {
   const pau = data.pau_advisory;
   const irr = data.district_irrigation_profile;
 
-  // Convert DES milled rice (67% recovery) to raw harvested paddy (dhan)
   const isRice = (data.crop || "").toLowerCase() === "rice";
   const MILLING_RECOVERY = 0.67;
 
@@ -176,4 +175,45 @@ function renderResults(data) {
     : `Across ${data.area_ekad} ekad`;
 
   if (pau.variety_details) {
-    const bench = pau.variety_details.pau_avg_yield_q_ek
+    const bench = pau.variety_details.pau_avg_yield_q_ekad;
+    document.getElementById("res-pau-bench").textContent = `${bench} q/ekad`;
+    const gap = +(bench - displayYield).toFixed(2);
+    document.getElementById("res-pau-gap").textContent =
+      gap > 0
+        ? `${gap} q/ekad upside potential vs district avg`
+        : `${Math.abs(gap)} q/ekad above PAU average`;
+  } else {
+    document.getElementById("res-pau-bench").textContent = "N/A";
+    document.getElementById("res-pau-gap").textContent = "No PAU variety entry";
+  }
+
+  const fertPills = document.getElementById("fert-pills");
+  fertPills.innerHTML = "";
+  if (pau.total_fertilizer_bags_for_area) {
+    Object.entries(pau.total_fertilizer_bags_for_area).forEach(([fert, bags]) => {
+      const kg = pau.total_fertilizer_kg_for_area[fert];
+      const div = document.createElement("div");
+      div.className = "pill";
+      div.innerHTML = `${fert}: <strong>${bags} bags</strong> (${kg} kg)`;
+      fertPills.appendChild(div);
+    });
+    document.getElementById(
+      "sowing-note"
+    ).textContent = `Variety: ${pau.selected_variety} · Maturity: ${pau.variety_details.maturity_days} days · Optimal Sowing: ${pau.variety_details.sowing_window}`;
+  } else {
+    fertPills.innerHTML = `<div class="pill">Consult PAU Ludhiana Package of Practices for exact dose.</div>`;
+    document.getElementById("sowing-note").textContent = "";
+  }
+
+  const irrPills = document.getElementById("irr-pills");
+  irrPills.innerHTML = `
+    <div class="pill">Zone: <strong>${data.nabard_agro_climatic_zone.code}</strong> (${data.nabard_agro_climatic_zone.name})</div>
+    <div class="pill">Tubewell Share: <strong>${irr.tubewell_share_pct ?? "N/A"}%</strong></div>
+    <div class="pill">Canal Share: <strong>${irr.canal_share_pct ?? "N/A"}%</strong></div>
+    <div class="pill">Irrigation Intensity: <strong>${irr.irrigation_intensity_pct ?? "N/A"}%</strong></div>
+  `;
+
+  resultsSection.classList.remove("hidden");
+}
+
+initApp();
